@@ -3,6 +3,7 @@ package pl.diabeticclac.datamodel;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -10,7 +11,7 @@ import java.util.Date;
  */
 @Data
 @Table(name="MEASUREMENT")
-public class Measurement {
+public class Measurement implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "S_MEASUREMENT")
@@ -18,6 +19,7 @@ public class Measurement {
     @Column(name = "ID", precision = 10, scale = 0)
     private Long id;
 
+    @Column
     private Double value;
 
     @OneToOne(fetch = FetchType.LAZY, mappedBy = "measurement", cascade = CascadeType.ALL)
@@ -27,5 +29,6 @@ public class Measurement {
     @JoinColumn(name = "USER_ID")
     private User user;
 
+    @Column
     private Date measurementDate;
 }

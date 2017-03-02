@@ -3,6 +3,7 @@ package pl.diabeticclac.datamodel;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -10,7 +11,7 @@ import java.util.Date;
  */
 @Data
 @Table(name="DOSE")
-public class Dose {
+public class Dose implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "S_DOSE")
@@ -19,7 +20,9 @@ public class Dose {
     private Long id;
 
     @OneToOne(fetch = FetchType.LAZY)
+    @Column
     private Measurement measurement;
 
+    @Column
     private Date doseDate;
 }

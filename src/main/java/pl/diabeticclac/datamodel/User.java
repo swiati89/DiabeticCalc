@@ -6,14 +6,15 @@ import org.hibernate.annotations.FetchMode;
 
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by pswiatek on 2017-03-01.
  */
-@Data
+
 @Table(name="USER")
-public class User {
+public @Data class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "S_USER")
@@ -21,14 +22,31 @@ public class User {
     @Column(name = "ID", precision = 10, scale = 0)
     private Long id;
 
+    @Column
     private String name;
+
+    @Column
     private String surname;
+
+    @Column
     private String login;
+
+    @Column
     private String password;
-    private Long weight;
-    private Long height;
-    private Long bmi;
+
+    @Column
+    private Double weight;
+
+    @Column
+    private Double height;
+
+    @Column
+    private Double bmi;
+
+    @Column
     private Integer dailyCalories;
+
+    @Column
     private Integer illnessTime;
 
     @OneToMany(mappedBy = "User", orphanRemoval = true)
