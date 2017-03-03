@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE hibernate-configuration SYSTEM "classpath://org/hibernate/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <mapping class="pl.diabeticclac.datamodel.User"/>
+        <mapping class="pl.diabeticclac.datamodel.Measurement"/>
+        <mapping class="pl.diabeticclac.datamodel.Dose"/>
+
+
+        <!--&lt;!&ndash; COMPONENT INTEGRATION - DO NOT REMOVE THIS COMMENT!!! &ndash;&gt;-->
+        <!--&lt;!&ndash;COMPONENT-usermanagement-START&ndash;&gt;-->
+        <!--<mapping class="pl.cubeitg.usermanagement.model.UserSessionLog"/>-->
+        <!--<mapping class="pl.cubeitg.common.model.Address"/>-->
+        <!--<mapping class="pl.cubeitg.usermanagement.model.Permission"/>-->
+        <!--<mapping class="pl.cubeitg.usermanagement.model.PermissionCategory"/>-->
+        <!--<mapping class="pl.cubeitg.usermanagement.model.PermissionScope"/>-->
+        <!--<mapping class="pl.cubeitg.usermanagement.model.RoleAssignment"/>-->
+        <!--<mapping class="pl.cubeitg.usermanagement.model.ScopeDataSource"/>-->
+        <!--&lt;!&ndash;COMPONENT-usermanagement-END&ndash;&gt;-->
+        <!--&lt;!&ndash;COMPONENT-dictionarymanagement-START&ndash;&gt;-->
+        <!--<mapping class="pl.cubeitg.dictionarymanagement.model.Dictionary"/>-->
+        <!--<mapping class="pl.cubeitg.dictionarymanagement.model.DictionaryValue"/>-->
+        <!--<mapping class="pl.cubeitg.dictionarymanagement.model.DictionaryAttributeDef"/>-->
+        <!--<mapping class="pl.cubeitg.dictionarymanagement.model.DictionaryAttributeValue"/>-->
+        <!--<mapping class="pl.cubeitg.dictionarymanagement.model.DictionaryCategory"/>-->
+        <!--<mapping class="pl.cubeitg.dictionarymanagement.model.DictionaryLanguage"/>-->
+        <!--<mapping class="pl.cubeitg.dictionarymanagement.model.DictionaryValueTranslation"/>-->
+        <!--<mapping class="pl.cubeitg.dictionarymanagement.model.DictionaryAttributeValueTranslation"/>-->
+        <!--<mapping class="pl.cubeitg.dictionarymanagement.model.DictionaryPostalAddress"/>-->
+        <!--&lt;!&ndash;COMPONENT-dictionarymanagement-END&ndash;&gt;-->
+
+
+        <!--<mapping class="pl.cubeitg.paszportyzacja.model.AttributeDefinition"/>-->
+        <!--<mapping class="pl.cubeitg.paszportyzacja.model.Document"/>-->
+        <!--<mapping class="pl.cubeitg.paszportyzacja.model.Item"/>-->
+        <!--<mapping class="pl.cubeitg.paszportyzacja.model.ObjectDefinition"/>-->
+        <!--<mapping class="pl.cubeitg.paszportyzacja.model.ObjectReference"/>-->
+        <!--<mapping class="pl.cubeitg.paszportyzacja.model.Parameter"/>-->
+        <!--<mapping class="pl.cubeitg.paszportyzacja.model.ValidationRule"/>-->
+
+
+
+    </session-factory>
+</hibernate-configuration>

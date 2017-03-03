@@ -10,6 +10,7 @@ import java.util.Date;
  * Created by pswiatek on 2017-03-01.
  */
 @Data
+@Entity
 @Table(name="DOSE")
 public class Dose implements Serializable {
 
